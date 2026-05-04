@@ -54,20 +54,20 @@ final class ColombiaCcDocumentTest extends TestCase
     public static function validCcs(): array
     {
         return [
-            '6 digitos (minimo)'   => ['123456'],
-            '8 digitos'            => ['12345678'],
-            '10 digitos (maximo)'  => ['1234567890'],
-            '7 digitos'            => ['1234567'],
+            '6 digitos (minimo)' => ['123456'],
+            '8 digitos' => ['12345678'],
+            '10 digitos (maximo)' => ['1234567890'],
+            '7 digitos' => ['1234567'],
         ];
     }
 
     public static function invalidCcs(): array
     {
         return [
-            'vacio'            => [''],
-            'muy corto'        => ['12345'],
-            'muy largo'        => ['12345678901'],
-            'solo letras'      => ['ABCDEFGHIJ'],
+            'vacio' => [''],
+            'muy corto' => ['12345'],
+            'muy largo' => ['12345678901'],
+            'solo letras' => ['ABCDEFGHIJ'],
         ];
     }
 }

@@ -13,26 +13,26 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 final readonly class DocumentProcessor
 {
     public function __construct(
-        private DocumentFactory      $factory    = new DocumentFactory(),
-        private ?TranslatorInterface $translator = null,
+        private DocumentFactory $factory = new DocumentFactory(),
+        private TranslatorInterface|null $translator = null,
     ) {
     }
 
     public function process(string $raw, CountryDocumentEnum $country, DocumentTypeEnum $type): DocumentResultDTO
     {
-        $doc   = $this->factory->make($country, $type);
+        $doc = $this->factory->make($country, $type);
         $valid = $doc->isValid($raw);
 
         $message = $valid ? null : $this->translateInvalid($raw, $country, $type);
 
         return new DocumentResultDTO(
-            country:    $country,
-            type:       $type,
-            raw:        $raw,
+            country: $country,
+            type: $type,
+            raw: $raw,
             normalized: $doc->normalize($raw),
-            formatted:  $doc->format($raw),
-            valid:      $valid,
-            message:    $message,
+            formatted: $doc->format($raw),
+            valid: $valid,
+            message: $message,
         );
     }
 

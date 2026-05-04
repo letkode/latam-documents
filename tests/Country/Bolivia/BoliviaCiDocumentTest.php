@@ -54,20 +54,20 @@ final class BoliviaCiDocumentTest extends TestCase
     public static function validCis(): array
     {
         return [
-            '5 digitos (minimo)'   => ['12345'],
-            '7 digitos'            => ['1234567'],
-            '10 digitos (maximo)'  => ['1234567890'],
-            '6 digitos'            => ['123456'],
+            '5 digitos (minimo)' => ['12345'],
+            '7 digitos' => ['1234567'],
+            '10 digitos (maximo)' => ['1234567890'],
+            '6 digitos' => ['123456'],
         ];
     }
 
     public static function invalidCis(): array
     {
         return [
-            'vacio'          => [''],
-            'muy corto'      => ['1234'],
-            'muy largo'      => ['12345678901'],
-            'con letras'     => ['1234A'],
+            'vacio' => [''],
+            'muy corto' => ['1234'],
+            'muy largo' => ['12345678901'],
+            'con letras' => ['1234A'],
         ];
     }
 }

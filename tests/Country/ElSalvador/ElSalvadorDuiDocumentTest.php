@@ -59,20 +59,20 @@ final class ElSalvadorDuiDocumentTest extends TestCase
     public static function validDuis(): array
     {
         return [
-            'sin guion'        => ['012345676'],
-            'con guion'        => ['01234567-6'],
-            'todos ceros'      => ['000000000'],
-            'otro valido'      => ['012345676'],
+            'sin guion' => ['012345676'],
+            'con guion' => ['01234567-6'],
+            'todos ceros' => ['000000000'],
+            'otro valido' => ['012345676'],
         ];
     }
 
     public static function invalidDuis(): array
     {
         return [
-            'vacio'          => [''],
-            'dv incorrecto'  => ['012345677'],
-            'muy corto'      => ['01234567'],
-            'muy largo'      => ['0123456760'],
+            'vacio' => [''],
+            'dv incorrecto' => ['012345677'],
+            'muy corto' => ['01234567'],
+            'muy largo' => ['0123456760'],
         ];
     }
 }

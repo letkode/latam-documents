@@ -11,12 +11,12 @@ final readonly class DocumentResultDTO
 {
     public function __construct(
         public CountryDocumentEnum $country,
-        public DocumentTypeEnum    $type,
-        public string              $raw,
-        public string              $normalized,
-        public string              $formatted,
-        public bool                $valid,
-        public ?string             $message = null,
+        public DocumentTypeEnum $type,
+        public string $raw,
+        public string $normalized,
+        public string $formatted,
+        public bool $valid,
+        public string|null $message = null,
     ) {
     }
 }

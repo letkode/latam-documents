@@ -59,20 +59,20 @@ final class UruguayCiDocumentTest extends TestCase
     public static function validCis(): array
     {
         return [
-            'valido 7 digitos'      => ['1234561'],
-            'con formato uruguayo'  => ['0.123.456-1'],
-            'otro valido'           => ['3456884'],
-            '8 digitos con cero'    => ['01234561'],
+            'valido 7 digitos' => ['1234561'],
+            'con formato uruguayo' => ['0.123.456-1'],
+            'otro valido' => ['3456884'],
+            '8 digitos con cero' => ['01234561'],
         ];
     }
 
     public static function invalidCis(): array
     {
         return [
-            'dv incorrecto'       => ['1234562'],
-            'letras normalizadas'  => ['123456A'],
-            'muy largo'           => ['123456789'],
-            'otro dv incorrecto'  => ['3456885'],
+            'dv incorrecto' => ['1234562'],
+            'letras normalizadas' => ['123456A'],
+            'muy largo' => ['123456789'],
+            'otro dv incorrecto' => ['3456885'],
         ];
     }
 }

@@ -64,20 +64,20 @@ final class VenezuelaCiDocumentTest extends TestCase
     public static function validCis(): array
     {
         return [
-            'prefijo V con guion 8 dig'  => ['V-12345678'],
-            'prefijo E con guion 7 dig'  => ['E-1234567'],
-            'prefijo V sin guion'        => ['V12345678'],
-            'prefijo V 6 dig'            => ['V-123456'],
+            'prefijo V con guion 8 dig' => ['V-12345678'],
+            'prefijo E con guion 7 dig' => ['E-1234567'],
+            'prefijo V sin guion' => ['V12345678'],
+            'prefijo V 6 dig' => ['V-123456'],
         ];
     }
 
     public static function invalidCis(): array
     {
         return [
-            'vacio'              => [''],
-            'sin prefijo'        => ['12345678'],
-            'prefijo invalido'   => ['A-12345678'],
-            'muy corto V'        => ['V-12345'],
+            'vacio' => [''],
+            'sin prefijo' => ['12345678'],
+            'prefijo invalido' => ['A-12345678'],
+            'muy corto V' => ['V-12345'],
         ];
     }
 }

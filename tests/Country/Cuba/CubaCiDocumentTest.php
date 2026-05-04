@@ -54,9 +54,9 @@ final class CubaCiDocumentTest extends TestCase
     public static function validCis(): array
     {
         return [
-            'YYMMDD valido'       => ['90011512345'],
-            'otro valido'         => ['85063012345'],
-            'nacido en enero'     => ['00010112345'],
+            'YYMMDD valido' => ['90011512345'],
+            'otro valido' => ['85063012345'],
+            'nacido en enero' => ['00010112345'],
             'nacido en diciembre' => ['95123112345'],
         ];
     }
@@ -64,11 +64,11 @@ final class CubaCiDocumentTest extends TestCase
     public static function invalidCis(): array
     {
         return [
-            'vacio'           => [''],
+            'vacio' => [''],
             'mes invalido 00' => ['90001512345'],
             'mes invalido 13' => ['90131512345'],
             'dia invalido 00' => ['90010012345'],
-            'muy corto'       => ['9001151234'],
+            'muy corto' => ['9001151234'],
         ];
     }
 }

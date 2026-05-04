@@ -54,21 +54,21 @@ final class EcuadorCiDocumentTest extends TestCase
     public static function validCis(): array
     {
         return [
-            'provincia 01 valida'  => ['0100000009'],
-            'provincia 02'         => ['0200000008'],
-            'provincia 24'         => ['2400000002'],
-            'otro valido'          => ['1710034065'],
+            'provincia 01 valida' => ['0100000009'],
+            'provincia 02' => ['0200000008'],
+            'provincia 24' => ['2400000002'],
+            'otro valido' => ['1710034065'],
         ];
     }
 
     public static function invalidCis(): array
     {
         return [
-            'vacio'              => [''],
-            'provincia 00'       => ['0000000000'],
-            'provincia 25'       => ['2500000000'],
-            'dv incorrecto'      => ['0100000001'],
-            'muy corto'          => ['010000000'],
+            'vacio' => [''],
+            'provincia 00' => ['0000000000'],
+            'provincia 25' => ['2500000000'],
+            'dv incorrecto' => ['0100000001'],
+            'muy corto' => ['010000000'],
         ];
     }
 }

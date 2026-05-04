@@ -59,20 +59,20 @@ final class SpainNieDocumentTest extends TestCase
     public static function validNies(): array
     {
         return [
-            'prefijo X'          => ['X1234567L'],
-            'prefijo Y'          => ['Y1234567X'],
-            'prefijo Z'          => ['Z1234567R'],
-            'con guiones'        => ['X-1234567-L'],
+            'prefijo X' => ['X1234567L'],
+            'prefijo Y' => ['Y1234567X'],
+            'prefijo Z' => ['Z1234567R'],
+            'con guiones' => ['X-1234567-L'],
         ];
     }
 
     public static function invalidNies(): array
     {
         return [
-            'vacio'              => [''],
+            'vacio' => [''],
             'prefijo invalido A' => ['A1234567L'],
-            'letra incorrecta'   => ['X1234567A'],
-            'muy corto'          => ['X123456L'],
+            'letra incorrecta' => ['X1234567A'],
+            'muy corto' => ['X123456L'],
         ];
     }
 }

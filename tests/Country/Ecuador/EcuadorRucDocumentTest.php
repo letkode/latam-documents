@@ -54,21 +54,21 @@ final class EcuadorRucDocumentTest extends TestCase
     public static function validRucs(): array
     {
         return [
-            'persona natural sufijo 001'  => ['0100000009001'],
-            'persona natural sufijo 002'  => ['0100000009002'],
-            'otro valido'                 => ['1710034065001'],
-            'sufijo diferente de 001'     => ['0200000008003'],
+            'persona natural sufijo 001' => ['0100000009001'],
+            'persona natural sufijo 002' => ['0100000009002'],
+            'otro valido' => ['1710034065001'],
+            'sufijo diferente de 001' => ['0200000008003'],
         ];
     }
 
     public static function invalidRucs(): array
     {
         return [
-            'vacio'              => [''],
-            'sufijo 000'         => ['0100000009000'],
-            'ci base invalida'   => ['0100000001001'],
-            'muy corto'          => ['010000000900'],
-            'muy largo'          => ['01000000090011'],
+            'vacio' => [''],
+            'sufijo 000' => ['0100000009000'],
+            'ci base invalida' => ['0100000001001'],
+            'muy corto' => ['010000000900'],
+            'muy largo' => ['01000000090011'],
         ];
     }
 }

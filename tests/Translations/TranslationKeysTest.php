@@ -13,7 +13,7 @@ final class TranslationKeysTest extends TestCase
 
     public function testAllLocalesHaveSameKeys(): void
     {
-        $locales      = ['es', 'en', 'pt'];
+        $locales = ['es', 'en', 'pt'];
         $keysByLocale = [];
 
         foreach ($locales as $locale) {

@@ -54,20 +54,20 @@ final class ParaguayCiDocumentTest extends TestCase
     public static function validCis(): array
     {
         return [
-            '6 digitos (minimo)'  => ['123456'],
-            '7 digitos'           => ['1234567'],
-            '8 digitos (maximo)'  => ['12345678'],
-            'otro valido'         => ['9876543'],
+            '6 digitos (minimo)' => ['123456'],
+            '7 digitos' => ['1234567'],
+            '8 digitos (maximo)' => ['12345678'],
+            'otro valido' => ['9876543'],
         ];
     }
 
     public static function invalidCis(): array
     {
         return [
-            'vacio'       => [''],
-            'muy corto'   => ['12345'],
-            'muy largo'   => ['123456789'],
-            'con letras'  => ['12345A'],
+            'vacio' => [''],
+            'muy corto' => ['12345'],
+            'muy largo' => ['123456789'],
+            'con letras' => ['12345A'],
         ];
     }
 }

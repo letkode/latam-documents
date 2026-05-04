@@ -59,20 +59,20 @@ final class DominicanRepublicCedulaDocumentTest extends TestCase
     public static function validCedulas(): array
     {
         return [
-            'valida con dv 9'   => ['00100000009'],
-            'con guiones'       => ['001-0000000-9'],
-            'otro valido'       => ['22400022418'],
-            'otro valido 2'     => ['40212776047'],
+            'valida con dv 9' => ['00100000009'],
+            'con guiones' => ['001-0000000-9'],
+            'otro valido' => ['22400022418'],
+            'otro valido 2' => ['40212776047'],
         ];
     }
 
     public static function invalidCedulas(): array
     {
         return [
-            'vacio'          => [''],
-            'dv incorrecto'  => ['00100000001'],
-            'muy corto'      => ['0010000000'],
-            'muy largo'      => ['001000000090'],
+            'vacio' => [''],
+            'dv incorrecto' => ['00100000001'],
+            'muy corto' => ['0010000000'],
+            'muy largo' => ['001000000090'],
         ];
     }
 }

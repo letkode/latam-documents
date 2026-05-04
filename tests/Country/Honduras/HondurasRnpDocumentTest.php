@@ -59,20 +59,20 @@ final class HondurasRnpDocumentTest extends TestCase
     public static function validRnps(): array
     {
         return [
-            '13 digitos exactos'  => ['0101198012345'],
-            'con guiones'         => ['0101-1980-12345'],
-            'otro valido'         => ['1234567890123'],
-            'otro 2'              => ['9999999999999'],
+            '13 digitos exactos' => ['0101198012345'],
+            'con guiones' => ['0101-1980-12345'],
+            'otro valido' => ['1234567890123'],
+            'otro 2' => ['9999999999999'],
         ];
     }
 
     public static function invalidRnps(): array
     {
         return [
-            'vacio'       => [''],
-            'muy corto'   => ['010119801234'],
-            'muy largo'   => ['01011980123456'],
-            'con letras'  => ['010119801234A'],
+            'vacio' => [''],
+            'muy corto' => ['010119801234'],
+            'muy largo' => ['01011980123456'],
+            'con letras' => ['010119801234A'],
         ];
     }
 }

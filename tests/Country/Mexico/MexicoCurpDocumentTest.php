@@ -54,21 +54,21 @@ final class MexicoCurpDocumentTest extends TestCase
     public static function validCurps(): array
     {
         return [
-            'masculino colima'   => ['BADD110313HCMLNS09'],
-            'femenino veracruz'  => ['HEGG560427MVZRRL04'],
-            'estado NE'          => ['AAAA800101HNELNN09'],
-            'otro valido'        => ['GODE561231HOCMNS09'],
+            'masculino colima' => ['BADD110313HCMLNS09'],
+            'femenino veracruz' => ['HEGG560427MVZRRL04'],
+            'estado NE' => ['AAAA800101HNELNN09'],
+            'otro valido' => ['GODE561231HOCMNS09'],
         ];
     }
 
     public static function invalidCurps(): array
     {
         return [
-            'vacio'              => [''],
-            'muy corto'          => ['BADD110313HCMLNS0'],
-            'mes invalido'       => ['BADD111313HCMLNS09'],
-            'estado invalido'    => ['BADD110313HXXLNS09'],
-            'sin vocal inicial'  => ['BBDD110313HCMLNS09'],
+            'vacio' => [''],
+            'muy corto' => ['BADD110313HCMLNS0'],
+            'mes invalido' => ['BADD111313HCMLNS09'],
+            'estado invalido' => ['BADD110313HXXLNS09'],
+            'sin vocal inicial' => ['BBDD110313HCMLNS09'],
         ];
     }
 }

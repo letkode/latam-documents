@@ -54,20 +54,20 @@ final class SpainCifDocumentTest extends TestCase
     public static function validCifs(): array
     {
         return [
-            'tipo A con digito'  => ['A12345674'],
-            'tipo A con letra'   => ['A1234567D'],
-            'tipo B'             => ['B12345674'],
-            'tipo P solo letra'  => ['P1234567D'],
+            'tipo A con digito' => ['A12345674'],
+            'tipo A con letra' => ['A1234567D'],
+            'tipo B' => ['B12345674'],
+            'tipo P solo letra' => ['P1234567D'],
         ];
     }
 
     public static function invalidCifs(): array
     {
         return [
-            'vacio'              => [''],
+            'vacio' => [''],
             'control incorrecto' => ['A12345678'],
             'prefijo invalido I' => ['I12345674'],
-            'muy corto'          => ['A123456'],
+            'muy corto' => ['A123456'],
         ];
     }
 }

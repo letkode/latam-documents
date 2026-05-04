@@ -59,20 +59,20 @@ final class ArgentinaCuilDocumentTest extends TestCase
     public static function validCuils(): array
     {
         return [
-            'valido sin guiones'  => ['20123456786'],
-            'valido con guiones'  => ['20-12345678-6'],
-            'prefijo 27 dv 0'     => ['27123456780'],
-            'prefijo 23 dv 5'     => ['23123456785'],
+            'valido sin guiones' => ['20123456786'],
+            'valido con guiones' => ['20-12345678-6'],
+            'prefijo 27 dv 0' => ['27123456780'],
+            'prefijo 23 dv 5' => ['23123456785'],
         ];
     }
 
     public static function invalidCuils(): array
     {
         return [
-            'vacio'                    => [''],
-            'digito verificador malo'  => ['20123456787'],
-            'menos de 11 digitos'      => ['2012345678'],
-            'mas de 11 digitos'        => ['201234567860'],
+            'vacio' => [''],
+            'digito verificador malo' => ['20123456787'],
+            'menos de 11 digitos' => ['2012345678'],
+            'mas de 11 digitos' => ['201234567860'],
         ];
     }
 }

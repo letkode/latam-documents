@@ -54,20 +54,20 @@ final class ArgentinaCuitDocumentTest extends TestCase
     public static function validCuits(): array
     {
         return [
-            'persona fisica prefijo 20'  => ['20123456786'],
-            'con guiones'                => ['20-12345678-6'],
-            'empresa prefijo 30 dv 1'    => ['30123456781'],
-            'empresa prefijo 33 dv 0'    => ['33123456780'],
+            'persona fisica prefijo 20' => ['20123456786'],
+            'con guiones' => ['20-12345678-6'],
+            'empresa prefijo 30 dv 1' => ['30123456781'],
+            'empresa prefijo 33 dv 0' => ['33123456780'],
         ];
     }
 
     public static function invalidCuits(): array
     {
         return [
-            'vacio'                    => [''],
-            'digito verificador malo'  => ['20123456787'],
-            'menos de 11 digitos'      => ['2012345678'],
-            'mas de 11 digitos'        => ['201234567860'],
+            'vacio' => [''],
+            'digito verificador malo' => ['20123456787'],
+            'menos de 11 digitos' => ['2012345678'],
+            'mas de 11 digitos' => ['201234567860'],
         ];
     }
 }

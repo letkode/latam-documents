@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Letkode\LatamDocument\Exception;
 
-abstract class DocumentException extends \RuntimeException
+use RuntimeException;
+
+abstract class DocumentException extends RuntimeException
 {
 }

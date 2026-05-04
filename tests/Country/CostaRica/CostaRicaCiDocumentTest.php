@@ -59,20 +59,20 @@ final class CostaRicaCiDocumentTest extends TestCase
     public static function validCis(): array
     {
         return [
-            '9 digitos exactos'  => ['101110123'],
-            'con guiones'        => ['1-0111-0123'],
-            'otro valido'        => ['123456789'],
-            'otro valido 2'      => ['900000001'],
+            '9 digitos exactos' => ['101110123'],
+            'con guiones' => ['1-0111-0123'],
+            'otro valido' => ['123456789'],
+            'otro valido 2' => ['900000001'],
         ];
     }
 
     public static function invalidCis(): array
     {
         return [
-            'vacio'       => [''],
-            'muy corto'   => ['12345678'],
-            'muy largo'   => ['1234567890'],
-            'con letras'  => ['12345678A'],
+            'vacio' => [''],
+            'muy corto' => ['12345678'],
+            'muy largo' => ['1234567890'],
+            'con letras' => ['12345678A'],
         ];
     }
 }

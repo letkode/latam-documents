@@ -16,7 +16,7 @@ final class DocumentProcessorTest extends TestCase
     public function testProcessReturnsValidDTO(): void
     {
         $processor = new DocumentProcessor();
-        $result    = $processor->process('12.345.678-5', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
+        $result = $processor->process('12.345.678-5', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
 
         self::assertTrue($result->valid);
         self::assertNull($result->message);
@@ -27,7 +27,7 @@ final class DocumentProcessorTest extends TestCase
     public function testProcessReturnsInvalidDTOWithMessage(): void
     {
         $processor = new DocumentProcessor();
-        $result    = $processor->process('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
+        $result = $processor->process('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
 
         self::assertFalse($result->valid);
         self::assertNotNull($result->message);
@@ -36,12 +36,12 @@ final class DocumentProcessorTest extends TestCase
     public function testProcessOrFailThrowsOnInvalidDocument(): void
     {
         $this->expectException(InvalidDocumentException::class);
-        (new DocumentProcessor())->processOrFail('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
+        new DocumentProcessor()->processOrFail('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
     }
 
     public function testProcessOrFailReturnsResultOnValidDocument(): void
     {
-        $result = (new DocumentProcessor())->processOrFail('12.345.678-5', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
+        $result = new DocumentProcessor()->processOrFail('12.345.678-5', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
         self::assertTrue($result->valid);
     }
 
@@ -54,7 +54,7 @@ final class DocumentProcessorTest extends TestCase
             ->willReturn('Translated message');
 
         $processor = new DocumentProcessor(translator: $translator);
-        $result    = $processor->process('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
+        $result = $processor->process('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
 
         self::assertSame('Translated message', $result->message);
     }
@@ -62,7 +62,7 @@ final class DocumentProcessorTest extends TestCase
     public function testProcessWithoutTranslatorFallsBackToDefaultMessage(): void
     {
         $processor = new DocumentProcessor();
-        $result    = $processor->process('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
+        $result = $processor->process('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
 
         self::assertStringContainsString('11111111', $result->message);
     }
@@ -70,7 +70,7 @@ final class DocumentProcessorTest extends TestCase
     public function testInvalidDocumentExceptionCarriesMetadata(): void
     {
         try {
-            (new DocumentProcessor())->processOrFail('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
+            new DocumentProcessor()->processOrFail('11111111', CountryDocumentEnum::CL, DocumentTypeEnum::RUT);
             self::fail('Expected InvalidDocumentException');
         } catch (InvalidDocumentException $e) {
             self::assertSame('11111111', $e->raw);

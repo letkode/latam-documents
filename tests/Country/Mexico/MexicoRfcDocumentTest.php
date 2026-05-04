@@ -54,20 +54,20 @@ final class MexicoRfcDocumentTest extends TestCase
     public static function validRfcs(): array
     {
         return [
-            'persona fisica 13 chars'   => ['BAAD850101AAA'],
-            'persona moral 12 chars'    => ['ABC850101AAA'],
-            'con &'                     => ['A&BC850101AAA'],
-            'homoclave con digitos'      => ['BAAD850101A1B'],
+            'persona fisica 13 chars' => ['BAAD850101AAA'],
+            'persona moral 12 chars' => ['ABC850101AAA'],
+            'con &' => ['A&BC850101AAA'],
+            'homoclave con digitos' => ['BAAD850101A1B'],
         ];
     }
 
     public static function invalidRfcs(): array
     {
         return [
-            'vacio'           => [''],
-            'muy corto'       => ['BAAD850101AA'],
-            'inicia con dig'  => ['1AAD850101AAA'],
-            'mes invalido'    => ['BAAD851301AAA'],
+            'vacio' => [''],
+            'muy corto' => ['BAAD850101AA'],
+            'inicia con dig' => ['1AAD850101AAA'],
+            'mes invalido' => ['BAAD851301AAA'],
         ];
     }
 }

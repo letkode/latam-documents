@@ -59,20 +59,20 @@ final class VenezuelaRifDocumentTest extends TestCase
     public static function validRifs(): array
     {
         return [
-            'prefijo J con guiones'  => ['J-000000000-0'],
-            'prefijo G'              => ['G-123456789-5'],
-            'prefijo V'              => ['V-123456789-1'],
-            'prefijo E sin guiones'  => ['E1234567890'],
+            'prefijo J con guiones' => ['J-000000000-0'],
+            'prefijo G' => ['G-123456789-5'],
+            'prefijo V' => ['V-123456789-1'],
+            'prefijo E sin guiones' => ['E1234567890'],
         ];
     }
 
     public static function invalidRifs(): array
     {
         return [
-            'vacio'              => [''],
+            'vacio' => [''],
             'prefijo invalido A' => ['A-000000000-0'],
-            'muy corto 8 dig'    => ['J-12345678-0'],
-            'sin prefijo'        => ['000000000-0'],
+            'muy corto 8 dig' => ['J-12345678-0'],
+            'sin prefijo' => ['000000000-0'],
         ];
     }
 }

@@ -54,21 +54,21 @@ final class PeruRucDocumentTest extends TestCase
     public static function validRucs(): array
     {
         return [
-            'persona natural prefijo 10'  => ['10123456781'],
-            'empresa prefijo 20'          => ['20123456786'],
-            'prefijo 15'                  => ['15123456782'],
-            'prefijo 17'                  => ['17123456785'],
+            'persona natural prefijo 10' => ['10123456781'],
+            'empresa prefijo 20' => ['20123456786'],
+            'prefijo 15' => ['15123456782'],
+            'prefijo 17' => ['17123456785'],
         ];
     }
 
     public static function invalidRucs(): array
     {
         return [
-            'vacio'              => [''],
-            'prefijo invalido'   => ['11123456789'],
-            'dv incorrecto'      => ['10123456782'],
-            'muy corto'          => ['1012345678'],
-            'muy largo'          => ['101234567810'],
+            'vacio' => [''],
+            'prefijo invalido' => ['11123456789'],
+            'dv incorrecto' => ['10123456782'],
+            'muy corto' => ['1012345678'],
+            'muy largo' => ['101234567810'],
         ];
     }
 }

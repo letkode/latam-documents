@@ -59,20 +59,20 @@ final class ColombiaNitDocumentTest extends TestCase
     public static function validNits(): array
     {
         return [
-            '10 digitos con dv'   => ['9000000005'],
-            'con guion'           => ['900000000-5'],
-            '9 digitos sin dv'    => ['900000000'],
-            'otro valido 10 dig'  => ['1234567896'],
+            '10 digitos con dv' => ['9000000005'],
+            'con guion' => ['900000000-5'],
+            '9 digitos sin dv' => ['900000000'],
+            'otro valido 10 dig' => ['1234567896'],
         ];
     }
 
     public static function invalidNits(): array
     {
         return [
-            'vacio'          => [''],
-            'muy corto'      => ['12345678'],
-            'muy largo'      => ['12345678901'],
-            'dv incorrecto'  => ['9000000006'],
+            'vacio' => [''],
+            'muy corto' => ['12345678'],
+            'muy largo' => ['12345678901'],
+            'dv incorrecto' => ['9000000006'],
         ];
     }
 }

@@ -54,20 +54,20 @@ final class PeruDniDocumentTest extends TestCase
     public static function validDnis(): array
     {
         return [
-            '8 digitos exactos'  => ['12345678'],
-            'otro valido'        => ['00000001'],
-            'otro 2'             => ['87654321'],
-            'otro 3'             => ['99999999'],
+            '8 digitos exactos' => ['12345678'],
+            'otro valido' => ['00000001'],
+            'otro 2' => ['87654321'],
+            'otro 3' => ['99999999'],
         ];
     }
 
     public static function invalidDnis(): array
     {
         return [
-            'vacio'       => [''],
-            'muy corto'   => ['1234567'],
-            'muy largo'   => ['123456789'],
-            'con letras'  => ['1234567A'],
+            'vacio' => [''],
+            'muy corto' => ['1234567'],
+            'muy largo' => ['123456789'],
+            'con letras' => ['1234567A'],
         ];
     }
 }

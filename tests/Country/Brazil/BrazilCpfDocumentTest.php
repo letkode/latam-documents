@@ -59,20 +59,20 @@ final class BrazilCpfDocumentTest extends TestCase
     public static function validCpfs(): array
     {
         return [
-            'con puntos y guion'  => ['111.444.777-35'],
-            'solo digitos'        => ['11144477735'],
-            'otro valido'         => ['52998224725'],
-            'otro valido 2'       => ['07493267006'],
+            'con puntos y guion' => ['111.444.777-35'],
+            'solo digitos' => ['11144477735'],
+            'otro valido' => ['52998224725'],
+            'otro valido 2' => ['07493267006'],
         ];
     }
 
     public static function invalidCpfs(): array
     {
         return [
-            'todos iguales'       => ['11111111111'],
-            'digito incorrecto'   => ['11144477734'],
-            'muy corto'           => ['1114447773'],
-            'vacio'               => [''],
+            'todos iguales' => ['11111111111'],
+            'digito incorrecto' => ['11144477734'],
+            'muy corto' => ['1114447773'],
+            'vacio' => [''],
         ];
     }
 }

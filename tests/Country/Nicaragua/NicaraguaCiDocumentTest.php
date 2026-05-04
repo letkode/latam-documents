@@ -59,20 +59,20 @@ final class NicaraguaCiDocumentTest extends TestCase
     public static function validCis(): array
     {
         return [
-            'con guiones'     => ['001-190516-0001A'],
-            'sin guiones'     => ['0011905160001A'],
-            'letra Z'         => ['001-190516-0001Z'],
-            'otro valido'     => ['123-456789-0001B'],
+            'con guiones' => ['001-190516-0001A'],
+            'sin guiones' => ['0011905160001A'],
+            'letra Z' => ['001-190516-0001Z'],
+            'otro valido' => ['123-456789-0001B'],
         ];
     }
 
     public static function invalidCis(): array
     {
         return [
-            'vacio'             => [''],
-            'sin letra final'   => ['001-190516-00012'],
-            'muy corto'         => ['001-190516-001A'],
-            'letras en medio'   => ['001-A90516-0001A'],
+            'vacio' => [''],
+            'sin letra final' => ['001-190516-00012'],
+            'muy corto' => ['001-190516-001A'],
+            'letras en medio' => ['001-A90516-0001A'],
         ];
     }
 }

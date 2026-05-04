@@ -59,20 +59,20 @@ final class BrazilCnpjDocumentTest extends TestCase
     public static function validCnpjs(): array
     {
         return [
-            'con mascara'      => ['11.222.333/0001-81'],
-            'solo digitos'     => ['11222333000181'],
-            'otro valido'      => ['45997418000153'],
-            'otro valido 2'    => ['11444777000161'],
+            'con mascara' => ['11.222.333/0001-81'],
+            'solo digitos' => ['11222333000181'],
+            'otro valido' => ['45997418000153'],
+            'otro valido 2' => ['11444777000161'],
         ];
     }
 
     public static function invalidCnpjs(): array
     {
         return [
-            'todos iguales'      => ['11111111111111'],
-            'dv incorrecto'      => ['11222333000182'],
-            'muy corto'          => ['1122233300018'],
-            'vacio'              => [''],
+            'todos iguales' => ['11111111111111'],
+            'dv incorrecto' => ['11222333000182'],
+            'muy corto' => ['1122233300018'],
+            'vacio' => [''],
         ];
     }
 }

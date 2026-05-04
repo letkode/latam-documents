@@ -64,20 +64,20 @@ final class ArgentinaDniDocumentTest extends TestCase
     public static function validDnis(): array
     {
         return [
-            '8 digitos'          => ['12345678'],
-            '7 digitos'          => ['1234567'],
-            'con puntos 8 dig'   => ['12.345.678'],
-            'con puntos 7 dig'   => ['1.234.567'],
+            '8 digitos' => ['12345678'],
+            '7 digitos' => ['1234567'],
+            'con puntos 8 dig' => ['12.345.678'],
+            'con puntos 7 dig' => ['1.234.567'],
         ];
     }
 
     public static function invalidDnis(): array
     {
         return [
-            'vacio'              => [''],
-            'muy corto'          => ['123456'],
-            'muy largo'          => ['123456789'],
-            'solo letras'        => ['ABCDEFGH'],
+            'vacio' => [''],
+            'muy corto' => ['123456'],
+            'muy largo' => ['123456789'],
+            'solo letras' => ['ABCDEFGH'],
         ];
     }
 }

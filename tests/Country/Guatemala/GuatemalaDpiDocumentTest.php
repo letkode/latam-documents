@@ -59,20 +59,20 @@ final class GuatemalaDpiDocumentTest extends TestCase
     public static function validDpis(): array
     {
         return [
-            '13 digitos exactos'  => ['1234567890123'],
-            'otro valido'         => ['0000000000001'],
-            'otro 2'              => ['9999999999999'],
-            'otro 3'              => ['1111111111111'],
+            '13 digitos exactos' => ['1234567890123'],
+            'otro valido' => ['0000000000001'],
+            'otro 2' => ['9999999999999'],
+            'otro 3' => ['1111111111111'],
         ];
     }
 
     public static function invalidDpis(): array
     {
         return [
-            'vacio'       => [''],
-            'muy corto'   => ['123456789012'],
-            'muy largo'   => ['12345678901234'],
-            'con letras'  => ['123456789012A'],
+            'vacio' => [''],
+            'muy corto' => ['123456789012'],
+            'muy largo' => ['12345678901234'],
+            'con letras' => ['123456789012A'],
         ];
     }
 }

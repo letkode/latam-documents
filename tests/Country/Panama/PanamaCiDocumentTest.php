@@ -54,19 +54,19 @@ final class PanamaCiDocumentTest extends TestCase
     public static function validCis(): array
     {
         return [
-            'formato N-NNN-NNNN'    => ['8-123-4567'],
-            'formato PE-NNN-NNNN'   => ['PE-123-4567'],
-            'formato E-NNN-NNNN'    => ['E-123-4567'],
-            'formato NN-NNN-NNNN'   => ['12-123-4567'],
+            'formato N-NNN-NNNN' => ['8-123-4567'],
+            'formato PE-NNN-NNNN' => ['PE-123-4567'],
+            'formato E-NNN-NNNN' => ['E-123-4567'],
+            'formato NN-NNN-NNNN' => ['12-123-4567'],
         ];
     }
 
     public static function invalidCis(): array
     {
         return [
-            'vacio'              => [''],
-            'muy corto'          => ['1234567'],
-            'prefijo 3 letras'   => ['ABC-123-4567'],
+            'vacio' => [''],
+            'muy corto' => ['1234567'],
+            'prefijo 3 letras' => ['ABC-123-4567'],
             'solo digitos largo' => ['12345678901'],
         ];
     }

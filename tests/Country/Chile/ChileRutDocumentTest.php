@@ -64,12 +64,12 @@ final class ChileRutDocumentTest extends TestCase
     public static function validRuts(): array
     {
         return [
-            'con puntos y guion'      => ['12.345.678-5'],
-            'sin puntos con guion'    => ['12345678-5'],
-            'solo digitos'            => ['123456785'],
+            'con puntos y guion' => ['12.345.678-5'],
+            'sin puntos con guion' => ['12345678-5'],
+            'solo digitos' => ['123456785'],
             'verificador K mayuscula' => ['7.920.000-K'],
             'verificador k minuscula' => ['7.920.000-k'],
-            'rut corto 7 digitos'     => ['7654321-6'],
+            'rut corto 7 digitos' => ['7654321-6'],
         ];
     }
 
@@ -77,10 +77,10 @@ final class ChileRutDocumentTest extends TestCase
     {
         return [
             'digito verificador incorrecto' => ['12.345.678-0'],
-            'vacio'                          => [''],
-            'letras'                         => ['AB.CDE.FGH-I'],
-            'demasiado corto'                => ['123-4'],
-            'dv incorrecto todos unos'       => ['11.111.111-0'],
+            'vacio' => [''],
+            'letras' => ['AB.CDE.FGH-I'],
+            'demasiado corto' => ['123-4'],
+            'dv incorrecto todos unos' => ['11.111.111-0'],
         ];
     }
 }

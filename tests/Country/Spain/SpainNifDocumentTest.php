@@ -59,20 +59,20 @@ final class SpainNifDocumentTest extends TestCase
     public static function validNifs(): array
     {
         return [
-            'letra Z correcta'   => ['12345678Z'],
-            'con guion'          => ['12345678-Z'],
-            'otro valido'        => ['00000000T'],
-            'otro valido 2'      => ['99999999R'],
+            'letra Z correcta' => ['12345678Z'],
+            'con guion' => ['12345678-Z'],
+            'otro valido' => ['00000000T'],
+            'otro valido 2' => ['99999999R'],
         ];
     }
 
     public static function invalidNifs(): array
     {
         return [
-            'vacio'            => [''],
+            'vacio' => [''],
             'letra incorrecta' => ['12345678A'],
-            'muy corto'        => ['1234567Z'],
-            'muy largo'        => ['123456789Z'],
+            'muy corto' => ['1234567Z'],
+            'muy largo' => ['123456789Z'],
         ];
     }
 }

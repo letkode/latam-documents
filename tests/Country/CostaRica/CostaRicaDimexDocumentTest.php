@@ -54,20 +54,20 @@ final class CostaRicaDimexDocumentTest extends TestCase
     public static function validDimexes(): array
     {
         return [
-            '11 digitos (minimo)'  => ['10112345678'],
-            '12 digitos (maximo)'  => ['101123456789'],
-            'otro 11 digitos'      => ['11234567890'],
-            'otro 12 digitos'      => ['112345678901'],
+            '11 digitos (minimo)' => ['10112345678'],
+            '12 digitos (maximo)' => ['101123456789'],
+            'otro 11 digitos' => ['11234567890'],
+            'otro 12 digitos' => ['112345678901'],
         ];
     }
 
     public static function invalidDimexes(): array
     {
         return [
-            'vacio'       => [''],
-            'muy corto'   => ['1234567890'],
-            'muy largo'   => ['1234567890123'],
-            'con letras'  => ['1234567890A'],
+            'vacio' => [''],
+            'muy corto' => ['1234567890'],
+            'muy largo' => ['1234567890123'],
+            'con letras' => ['1234567890A'],
         ];
     }
 }
