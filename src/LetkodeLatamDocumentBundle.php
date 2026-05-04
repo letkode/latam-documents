@@ -7,9 +7,7 @@ namespace Letkode\LatamDocument;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-
-use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
-
+use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 final class LetkodeLatamDocumentBundle extends AbstractBundle implements PrependExtensionInterface
@@ -21,16 +19,11 @@ final class LetkodeLatamDocumentBundle extends AbstractBundle implements Prepend
 
     public function loadExtension(array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
     {
-        $services = $container->services();
+        $builder->autowire(DocumentFactory::class)->setPublic(false);
 
-        $services->set(DocumentFactory::class)
-            ->autowire()
-            ->autoconfigure();
-
-        $services->set(DocumentProcessor::class)
-            ->autowire()
-            ->autoconfigure()
-            ->arg('$translator', service('translator')->nullOnInvalidReference());
+        $builder->autowire(DocumentProcessor::class)
+            ->setPublic(false)
+            ->setArgument('$translator', new Reference('translator', ContainerBuilder::NULL_ON_INVALID_REFERENCE));
     }
 
     public function prepend(ContainerBuilder $container): void
