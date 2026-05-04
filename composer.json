@@ -33,5 +33,12 @@
             "php-http/discovery": false
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "extra": {
+        "symfony": {
+            "bundles": {
+                "Letkode\\LatamDocument\\LetkodeLatamDocumentBundle": ["all"]
+            }
+        }
+    }
 }

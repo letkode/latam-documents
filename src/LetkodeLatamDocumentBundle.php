@@ -2,10 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Letkode\LatamDocuments;
+namespace Letkode\LatamDocument;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
+
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 final class LetkodeLatamDocumentBundle extends AbstractBundle implements PrependExtensionInterface
@@ -13,6 +17,20 @@ final class LetkodeLatamDocumentBundle extends AbstractBundle implements Prepend
     public function getPath(): string
     {
         return \dirname(__DIR__);
+    }
+
+    public function loadExtension(array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
+    {
+        $services = $container->services();
+
+        $services->set(DocumentFactory::class)
+            ->autowire()
+            ->autoconfigure();
+
+        $services->set(DocumentProcessor::class)
+            ->autowire()
+            ->autoconfigure()
+            ->arg('$translator', service('translator')->nullOnInvalidReference());
     }
 
     public function prepend(ContainerBuilder $container): void
@@ -23,7 +41,7 @@ final class LetkodeLatamDocumentBundle extends AbstractBundle implements Prepend
 
         $container->prependExtensionConfig('framework', [
             'translator' => [
-                'paths' => [\dirname(__DIR__) . '/resources/translations'],
+                'paths' => [__DIR__ . '/Translations'],
             ],
         ]);
     }
