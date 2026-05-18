@@ -1,4 +1,5 @@
 /vendor
+/.claude
 /coverage
 /composer.lock
 /.phpunit.result.cache
@@ -8,5 +9,11 @@
 /phpunit.xml
 
 /docker-compose.yml
+/.env
+/.env.local
+/.env.*.local
+/.idea
+/.vscode
+/.DS_Store
 
 /PACKAGE_PLAN.md
